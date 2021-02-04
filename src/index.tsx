@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import * as E from 'react-dom/experimental';
 
 const root = (
   <React.StrictMode>
@@ -10,8 +11,7 @@ const root = (
   </React.StrictMode>
 );
 
-//@ts-ignore
-ReactDOM.unstable_createRoot(root, document.getElementById('root'));
+ReactDOM.unstable_createRoot(document.getElementById('root')!).render(root);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
